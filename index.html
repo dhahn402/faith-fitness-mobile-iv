@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faith and Fitness Mobile IV — Hydration. Restored. At Your Door.</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: #1a3a52;
+    background: #ffffff;
+    line-height: 1.5;
+  }
+  .hero {
+    background: linear-gradient(135deg, #1a3a52 0%, #2a5a7a 100%);
+    color: white;
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+  }
+  .hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; font-weight: 700; letter-spacing: -0.02em; }
+  .hero .tagline { font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem; font-weight: 400; }
+  .cta { display: inline-block; background: #ffffff; color: #1a3a52; padding: 1rem 2rem;
+         border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.1rem;
+         box-shadow: 0 4px 14px rgba(0,0,0,0.15); transition: transform 0.2s; }
+  .cta:hover { transform: translateY(-2px); }
+  .section { max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem; }
+  .section h2 { font-size: 1.8rem; margin-bottom: 1rem; color: #1a3a52; text-align: center; }
+  .section .lead { font-size: 1.1rem; color: #555; text-align: center; max-width: 600px; margin: 0 auto 2rem; }
+  .menu { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+  .drip { background: #f7f9fa; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #2a5a7a; }
+  .drip.signature { border-left: 4px solid #c9a455; background: linear-gradient(135deg, #f7f9fa 0%, #fff8e7 100%); }
+  .drip h3 { font-size: 1.3rem; margin-bottom: 0.5rem; color: #1a3a52; }
+  .drip .price { font-size: 1.6rem; font-weight: 700; color: #2a5a7a; margin: 0.5rem 0; }
+  .drip.signature .price { color: #b8860b; }
+  .drip p { color: #555; font-size: 0.95rem; }
+  .drip .badge { display: inline-block; background: #c9a455; color: white; padding: 0.2rem 0.6rem;
+                 border-radius: 4px; font-size: 0.75rem; font-weight: 600; margin-bottom: 0.5rem; }
+  .membership { background: linear-gradient(135deg, #1a3a52 0%, #2a5a7a 100%); color: white;
+                padding: 3rem 1.5rem; text-align: center; }
+  .membership h2 { color: white; }
+  .membership-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                      gap: 1.5rem; max-width: 700px; margin: 2rem auto 0; }
+  .mem-card { background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px;
+              border: 1px solid rgba(255,255,255,0.2); }
+  .mem-card h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+  .mem-card .mem-price { font-size: 1.8rem; font-weight: 700; margin: 0.5rem 0; }
+  .mem-card .mem-detail { font-size: 0.95rem; opacity: 0.9; }
+  .mem-card .mem-save { background: #c9a455; padding: 0.3rem 0.8rem; border-radius: 4px;
+                         font-size: 0.85rem; font-weight: 600; display: inline-block; margin-top: 0.5rem; }
+  .why { background: #f7f9fa; padding: 3rem 1.5rem; }
+  .why ul { max-width: 600px; margin: 0 auto; list-style: none; }
+  .why li { padding: 1rem 0; border-bottom: 1px solid #e0e0e0; display: flex; align-items: center; }
+  .why li:last-child { border-bottom: none; }
+  .why li::before { content: "✓"; color: #2a8c4a; font-weight: 700; font-size: 1.2rem; margin-right: 1rem; }
+  .travel { background: #fff8e7; padding: 1.5rem; border-radius: 8px; margin-top: 2rem;
+            border-left: 4px solid #c9a455; }
+  .travel h4 { color: #8b6914; font-size: 1rem; margin-bottom: 0.5rem; }
+  .footer { background: #1a3a52; color: white; padding: 2rem 1.5rem; text-align: center; }
+  .footer p { margin: 0.5rem 0; }
+  .footer .verse { font-style: italic; opacity: 0.7; margin-top: 1rem; font-size: 0.9rem; }
+  .phone { font-size: 1.5rem; font-weight: 700; color: white; text-decoration: none; }
+  .booking-form { background: #f7f9fa; padding: 3rem 1.5rem; }
+  .booking-form form { max-width: 500px; margin: 0 auto; display: grid; gap: 1rem; }
+  .booking-form input, .booking-form select, .booking-form textarea {
+    padding: 0.8rem; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem;
+    font-family: inherit;
+  }
+  .booking-form button {
+    background: #1a3a52; color: white; padding: 1rem; border: none; border-radius: 50px;
+    font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: background 0.2s;
+  }
+  .booking-form button:hover { background: #2a5a7a; }
+  @media (max-width: 600px) { .hero h1 { font-size: 1.8rem; } .section h2 { font-size: 1.4rem; } }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <h1>Hydration. Restored.</h1>
+  <p class="tagline">Premium IV therapy delivered to your door in Eastern NC.</p>
+  <a href="#book" class="cta">📅 Book a Drip</a>
+</section>
+
+<section class="section">
+  <h2>Why Faith and Fitness Mobile IV</h2>
+  <p class="lead">Most IV clinics don't answer their phones. We do. RN-administered. Same-day mobile to home, office, hotel, or Airbnb. Eastern NC + Coastal Carolina.</p>
+</section>
+
+<section class="why">
+  <ul>
+    <li>Licensed Registered Nurse (RN) administered — clinical safety first</li>
+    <li>Same-day appointments — we ANSWER the phone</li>
+    <li>Mobile to your home, office, hotel, or Airbnb</li>
+    <li>Medical Director oversight — full clinical compliance</li>
+    <li>Wellness-first philosophy — faith-anchored, no pressure</li>
+    <li>Local, family-owned (Faith and Fitness Enterprises Eastern NC)</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>The Drips</h2>
+  <p class="lead">All include 1L IV fluids + your selected add-ins. RN-supervised. ~30-60 min sessions.</p>
+  <div class="menu">
+
+    <div class="drip">
+      <h3>💧 Pure Hydration</h3>
+      <p class="price">$129</p>
+      <p>1L lactated Ringer's or saline. Recovery, hangover, post-flight, post-workout. The simplest reset. ~30 min.</p>
+    </div>
+
+    <div class="drip">
+      <h3>⚡ Energy + Recovery</h3>
+      <p class="price">$179</p>
+      <p>Hydration + B-Complex + Vitamin C + magnesium. For fatigue, low energy, athletic recovery. ~45 min.</p>
+    </div>
+
+    <div class="drip">
+      <h3>🛡️ Immunity Boost</h3>
+      <p class="price">$199</p>
+      <p>Hydration + high-dose Vitamin C + zinc + B-Complex. Cold/flu support, travel prep, immune reset. ~45 min.</p>
+    </div>
+
+    <div class="drip">
+      <h3>✨ Glow + Detox</h3>
+      <p class="price">$229</p>
+      <p>Hydration + Glutathione + Vitamin C + B-Complex. Skin clarity, antioxidant boost, post-event recovery. ~45 min.</p>
+    </div>
+
+    <div class="drip signature">
+      <span class="badge">SIGNATURE</span>
+      <h3>🏆 The Methuselah</h3>
+      <p class="price">$299</p>
+      <p>Hydration + Glutathione + NAD+ + B-Complex + Vitamin C. Full-spectrum wellness reset. Our premium offering. ~60 min.</p>
+    </div>
+
+    <div class="drip">
+      <h3>💼 Custom Protocol</h3>
+      <p class="price">Call</p>
+      <p>Your existing protocol or specific medical needs. We accommodate per RN + Medical Director discretion.</p>
+    </div>
+  </div>
+
+  <div class="travel">
+    <h4>🚗 Travel</h4>
+    <p>Service area: New Bern, Greenville, Ayden, Kinston, and Coastal Carolina (Atlantic Beach, Emerald Isle, Beaufort, Morehead City). Travel fees: $25 for 30-50 mi, $50 for &gt;50 mi.</p>
+  </div>
+</section>
+
+<section class="membership">
+  <h2>Membership — Save with Packages</h2>
+  <p class="lead" style="color:rgba(255,255,255,0.9);">Regular customers save with our drip packages. No expiration on unused drips. Transferable to family.</p>
+  <div class="membership-cards">
+    <div class="mem-card">
+      <h3>3-Drip Pack</h3>
+      <p class="mem-price">$499</p>
+      <p class="mem-detail">$166 per drip average</p>
+      <span class="mem-save">Save up to $396</span>
+    </div>
+    <div class="mem-card">
+      <h3>6-Drip Pack</h3>
+      <p class="mem-price">$899</p>
+      <p class="mem-detail">$150 per drip average</p>
+      <span class="mem-save">Save up to $895</span>
+    </div>
+  </div>
+</section>
+
+<section class="booking-form" id="book">
+  <h2>Book a Drip</h2>
+  <p class="lead">Tell us a little about you and we'll call back within 1 hour during business hours.</p>
+  <form action="mailto:[INSERT_EMAIL]?subject=IV%20Booking%20Request" method="post" enctype="text/plain">
+    <input type="text" name="Name" placeholder="Your name" required>
+    <input type="tel" name="Phone" placeholder="Your phone" required>
+    <input type="text" name="Location" placeholder="Address (home, hotel, office)" required>
+    <select name="Drip">
+      <option value="">Pick a drip</option>
+      <option>Pure Hydration ($129)</option>
+      <option>Energy + Recovery ($179)</option>
+      <option>Immunity Boost ($199)</option>
+      <option>Glow + Detox ($229)</option>
+      <option>The Methuselah ($299)</option>
+      <option>3-Drip Pack ($499)</option>
+      <option>6-Drip Pack ($899)</option>
+      <option>Custom — call me</option>
+    </select>
+    <select name="Time">
+      <option value="">When?</option>
+      <option>Today (urgent)</option>
+      <option>Tomorrow morning</option>
+      <option>Tomorrow afternoon/evening</option>
+      <option>This week</option>
+      <option>Next week</option>
+    </select>
+    <textarea name="Notes" rows="3" placeholder="Anything we should know? (allergies, medications, special requests)"></textarea>
+    <button type="submit">📞 Request Callback</button>
+  </form>
+</section>
+
+<section class="section">
+  <h2>📞 Or Just Call Us</h2>
+  <p class="lead">We answer.</p>
+  <p style="text-align: center; margin-top: 1rem;"><a href="tel:[INSERT_PHONE]" class="phone" style="color: #2a5a7a;">[INSERT PHONE NUMBER]</a></p>
+</section>
+
+<footer class="footer">
+  <p><strong>Faith and Fitness Mobile IV</strong></p>
+  <p>Eastern NC + Coastal Carolina</p>
+  <p>RN: Ken Hopkins, Licensed in NC</p>
+  <p>Medical Director: [INSERT NAME], MD</p>
+  <p class="verse">"Whoever drinks the water I give will never thirst again." — John 4:14</p>
+</footer>
+
+</body>
+</html>
