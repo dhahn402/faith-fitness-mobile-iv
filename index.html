@@ -93,6 +93,16 @@
   .vs th.us, .vs td.us{ color:var(--deep); background:#dff0fb; font-weight:600; }
   .vs th.us{ color:var(--blue); }
   .vs tbody td:first-child{ font-weight:700; color:var(--blue); font-size:.82rem; text-transform:uppercase; letter-spacing:.02em; background:#fff; }
+  /* find-IV hub */
+  .finder-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:.9rem; max-width:720px; margin:1.2rem auto 0; }
+  .finder-grid a{ display:block; text-align:center; background:var(--wash2); border:1px solid var(--line); border-radius:12px; padding:1rem; font-weight:700; color:var(--blue); text-decoration:none; transition:.15s; }
+  .finder-grid a:hover{ background:#cbe8f8; transform:translateY(-2px); }
+  .guide{ background:#fff; border:1px solid var(--line); border-radius:12px; margin-bottom:.7rem; padding:0 1.1rem; max-width:720px; margin-left:auto; margin-right:auto; }
+  .guide summary{ cursor:pointer; padding:1rem 0; font-weight:700; color:var(--deep); list-style:none; }
+  .guide summary::-webkit-details-marker{ display:none; }
+  .guide summary::after{ content:"+"; float:right; color:var(--blue); }
+  .guide[open] summary::after{ content:"–"; }
+  .guide p{ color:var(--slate); padding:0 0 1rem; font-size:.95rem; }
   .tcard{ background:#fff; border-radius:14px; padding:1.5rem; box-shadow:0 2px 12px rgba(3,105,161,.08);
           border-top:3px solid var(--cyan); }
   .tcard .ic{ font-size:1.7rem; }
@@ -376,6 +386,25 @@
   L.marker(fl).addTo(m2).bindPopup('<b>Living Water Delivered</b><br>Delray Beach, FL &middot; Coming soon');
 })();
 </script>
+
+<section class="section" id="findiv">
+  <h2>Not open yet? We've still got you.</h2>
+  <p class="lead">Until Living Water launches, we'd rather help than leave you thirsty. Here's how to find quality IV therapy near you <em>right now</em> — plus a few honest basics so you know exactly what you're getting.</p>
+
+  <h3 style="text-align:center;color:var(--blue);font-family:var(--serif);font-size:1.4rem;margin:1.6rem 0 .2rem">📍 Find IV therapy near you</h3>
+  <div class="finder-grid">
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=IV+therapy+New+Bern+NC" target="_blank" rel="noopener">🌊 New Bern &amp; Crystal Coast →</a>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=IV+therapy+Delray+Beach+FL" target="_blank" rel="noopener">☀️ Delray Beach, FL →</a>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=IV+therapy+Miami+FL" target="_blank" rel="noopener">🌴 Miami, FL →</a>
+  </div>
+  <p style="text-align:center;color:var(--slate);font-size:.9rem;margin-top:1rem;max-width:600px;margin-left:auto;margin-right:auto">Spots we personally respect: <b>Prime IV Hydration &amp; Wellness</b> in Delray Beach, and <b>Drip IV Wellness &amp; MedSpa</b> on Middle Street in downtown New Bern. Good people doing it right.</p>
+
+  <h3 style="text-align:center;color:var(--blue);font-family:var(--serif);font-size:1.4rem;margin:2.4rem 0 1rem">💧 IV therapy, honestly explained</h3>
+  <details class="guide"><summary>What's actually in an IV drip?</summary><p>Most drips are a bag of sterile fluid — saline or lactated Ringer's — plus vitamins, minerals, or amino acids like B-complex, vitamin C, magnesium, zinc, or glutathione. It goes in through a small IV so the fluids and nutrients are delivered directly. It's not magic; it's hydration and nutrients, and an honest provider will tell you exactly that.</p></details>
+  <details class="guide"><summary>How do I choose a good IV provider?</summary><p>Ask three questions: (1) Who places the IV — a licensed Registered Nurse, or a technician? (2) Is there a physician overseeing the protocols? (3) Do they screen your health first? A trustworthy provider answers all three gladly. When we launch, ours are: a licensed NC RN, physician-supervised, with a health screening every single time.</p></details>
+  <details class="guide"><summary>Is mobile IV therapy safe?</summary><p>In the right hands, yes — the keys are a licensed professional, sterile equipment, and a proper health screening before treatment. It's a real clinical service, not a spa gimmick. If a provider skips the screening or won't tell you who's placing your line, that's your cue to walk away.</p></details>
+  <p style="text-align:center;color:var(--slate);font-size:.92rem;margin-top:1.2rem">We add fresh IV guides regularly. <a href="#book" style="color:var(--blue);font-weight:600">Join the waitlist</a> and we'll send them your way — and tell you the day we launch.</p>
+</section>
 
 <section class="booking-form" id="book">
   <h2>Be First in Line</h2>
