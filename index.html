@@ -85,6 +85,14 @@
   .trust h2{ font-size:2rem; color:var(--blue); text-align:center; margin-bottom:.6rem; }
   .trust-lead{ text-align:center; color:var(--slate); max-width:600px; margin:0 auto 2rem; font-size:1.05rem; }
   .trust-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.2rem; }
+  /* us vs them comparison */
+  .vs{ width:100%; border-collapse:collapse; max-width:760px; margin:1.6rem auto 0; font-size:.95rem; }
+  .vs th, .vs td{ padding:.85rem 1rem; text-align:left; border-bottom:1px solid var(--line); vertical-align:top; }
+  .vs thead th{ font-size:1rem; font-weight:700; }
+  .vs th.them, .vs td.them{ color:var(--slate); background:#f6f9fc; }
+  .vs th.us, .vs td.us{ color:var(--deep); background:#dff0fb; font-weight:600; }
+  .vs th.us{ color:var(--blue); }
+  .vs tbody td:first-child{ font-weight:700; color:var(--blue); font-size:.82rem; text-transform:uppercase; letter-spacing:.02em; background:#fff; }
   .tcard{ background:#fff; border-radius:14px; padding:1.5rem; box-shadow:0 2px 12px rgba(3,105,161,.08);
           border-top:3px solid var(--cyan); }
   .tcard .ic{ font-size:1.7rem; }
@@ -289,6 +297,25 @@
     <h4>🚗 Service Area</h4>
     <p>New Bern, Greenville, Ayden, Kinston, and the Crystal Coast — Atlantic Beach, Emerald Isle, Beaufort, Morehead City, and Jacksonville. Planned travel fees: $25 for 30–50 miles, $50 for over 50 miles.</p>
   </div>
+</section>
+
+<section class="section" id="difference">
+  <h2>The Living Water Difference</h2>
+  <p class="lead">You'll find the same drips everywhere — hydration, recovery, a glutathione "glow," performance, NAD+. What you <em>won't</em> find everywhere is the experience. When we launch, here's the difference you'll feel — because we adapt, we come to you, and we overcome the hassle so you don't have to.</p>
+  <div style="overflow-x:auto">
+    <table class="vs">
+      <thead><tr><th></th><th class="them">🏥 A Typical Clinic</th><th class="us">💧 Living Water</th></tr></thead>
+      <tbody>
+        <tr><td>Who places your IV</td><td class="them">Whoever's on shift — sometimes a technician</td><td class="us">A licensed NC Registered Nurse — never a tech</td></tr>
+        <tr><td>Where</td><td class="them">You drive over and wait in a lobby</td><td class="us">We come to you — home, hotel, or office</td></tr>
+        <tr><td>The phone</td><td class="them">Voicemail and callbacks</td><td class="us">A real person answers</td></tr>
+        <tr><td>Pricing</td><td class="them">Surprise add-on fees</td><td class="us">Honest, flat pricing up front</td></tr>
+        <tr><td>Your blend</td><td class="them">One-size-fits-all menu</td><td class="us">Custom-tailored — we adapt to you</td></tr>
+        <tr><td>The heart of it</td><td class="them">A transaction</td><td class="us">Faith-led care — treated like family</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="lead" style="text-align:center;font-style:italic;color:var(--blue);margin-top:1.5rem;font-size:1.05rem">"Improvise. Adapt. Overcome." — that's how we'll serve you. 🐻</p>
 </section>
 
 <section class="membership">
