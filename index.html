@@ -311,6 +311,26 @@
   <p class="events">💍 <b>Weddings, bachelorette weekends &amp; team events?</b> Ask about group rates on the coast when we launch.</p>
 </section>
 
+<!-- Coverage map — free OpenStreetMap / Leaflet, no API key -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<section class="section" id="area">
+  <h2>Where We'll Serve</h2>
+  <p class="lead">Coming to New Bern, Greenville, and the Crystal Coast — Atlantic Beach, Emerald Isle, Beaufort, Morehead City, Jacksonville, and the towns in between. At-home service across the area below.</p>
+  <div id="lw-map" role="img" aria-label="Map of the Living Water Delivered service area across Eastern NC and the Crystal Coast" style="height:350px;border-radius:16px;border:1px solid var(--line);box-shadow:0 8px 26px rgba(3,105,161,.14);position:relative;z-index:0"></div>
+</section>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function(){
+  var el=document.getElementById('lw-map');
+  if(typeof L==='undefined'){ if(el){el.style.display='none';} return; }
+  var center=[34.95,-76.86], nb=[35.1085,-77.0441];
+  var map=L.map('lw-map',{scrollWheelZoom:false,attributionControl:true}).setView(center,8);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
+  L.circle(center,{radius:62000,color:'#0369a1',weight:1.5,fillColor:'#06b6d4',fillOpacity:.12}).addTo(map);
+  L.marker(nb).addTo(map).bindPopup('<b>Living Water Delivered</b><br>Coming soon &middot; Text (252) 626-6236');
+})();
+</script>
+
 <section class="booking-form" id="book">
   <h2>Be First in Line</h2>
   <p class="lead">Join the waitlist and we'll reach out the moment we launch in your area. No payment now, no obligation — just first access and a founding-client perk.</p>
